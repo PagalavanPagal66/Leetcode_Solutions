@@ -1,12 +1,12 @@
 class Solution {
 public:
     vector<int> spiralOrder(vector<vector<int>>& a) {
-        int n=a.size();
-        int m=a[0].size();
+        int n=a.size(); //number of rows
+        int m=a[0].size(); //number of cols
         vector<int>v;
         int top=0,left=0,right=m-1,bottom=n-1;
         int ind=0;
-        while(1){
+        while(1){ 
             for(int i=left;i<=right;i++){
                 v.push_back(a[top][i]);
             }
