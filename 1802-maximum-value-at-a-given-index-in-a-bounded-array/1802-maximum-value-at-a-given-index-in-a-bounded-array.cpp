@@ -3,14 +3,13 @@ public:
     int maxValue(int n, int index, int maxSum) {
         long long low=1ll,high=1ll*maxSum;
         long long ans;
-        while(low<=high) { // Binary search
-            long long mid=(low+high)>>1;
+        while(low<=high) { 
+            long long mid=(low+high)/2;
             if(isPossible(mid,n,maxSum*1ll,index)) {
-                ans=mid; // store correct answer
-                low=mid+1; // move to right to get the optimal answer
+                ans=mid; 
+                low=mid+1; 
             }
-            else high=mid-1; /* if mid cannot be maximum 
-then all values >mid also cannot be maximum, hence we move to left of the search space */
+            else high=mid-1; 
         }
         return ans;
     }
