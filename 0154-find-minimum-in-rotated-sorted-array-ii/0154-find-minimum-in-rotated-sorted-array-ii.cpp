@@ -13,15 +13,15 @@ public:
                 ans = min(ans, nums[low]);
                 low++, high--;
             }
-            else if (nums[low] <= nums[mid]) // left half is sorted
+            else if (nums[low] <= nums[mid]) 
             {
                 ans = min(ans, nums[low]);
-                low = mid + 1; // eliminate left
+                low = mid + 1; 
             }
-            else if (nums[mid] <= nums[high]) // right half is sorted
+            else if (nums[mid] <= nums[high]) 
             {
                 ans = min(ans, nums[mid]);
-                high = mid - 1; // eliminate right
+                high = mid - 1; 
             }
         }
 
