@@ -6,17 +6,17 @@ public:
         sort(nums.begin(),nums.end());
         for(int i=0;i<n;i++){
             for(int j=i+1;j<n;j++){
-                long long int sum=nums[i]+nums[j];
+                int sum=nums[i]+nums[j];
                 int left=j+1;
                 int right=n-1;
                 while(left<=right){
-                    vector<int>t;
-                    int mid=left+(right-left)/2;
+                    vector<int>t; //creating temp vector
+                    int mid=left+(right-left)/2; //(right+left)/2
                     if(sum+nums[mid]==0){
                         t.push_back(nums[i]);
                         t.push_back(nums[j]);
                         t.push_back(nums[mid]);
-                        res.push_back(t);
+                        res.push_back(t); //adding this set of triplet to final ans vector
                         break;
                     }
                     if(nums[mid]+sum<0){
