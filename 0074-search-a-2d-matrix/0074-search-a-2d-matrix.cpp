@@ -1,5 +1,6 @@
 class Solution {
 public:
+    /*----------------recursive binary search-------------------------
     bool binarySearch(vector<int>&arr, int left, int right,int target){
         if(left==right && arr[left]==target)
             return true;
@@ -14,6 +15,25 @@ public:
         }
         return 0;
     }
+    */
+    //----------------looping binary search --------------------------
+    
+    bool binarySearch(vector<int>&arr,int left,int right,int target){
+        while(left<=right){
+            int mid=(right+left)/2;
+            if(arr[mid]==target){
+                return true;
+            }
+            if(arr[mid]>target){
+                right=mid-1;
+            }
+            else{
+                left=mid+1;
+            }
+        }
+        return false;
+    }
+    //----------------pre defined function----------------------------
     bool searchMatrix(vector<vector<int>>& matrix, int target) {
         int n=matrix.size(); 
         int m=matrix[0].size(); 
