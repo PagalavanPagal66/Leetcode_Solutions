@@ -73,10 +73,8 @@ public:
                         int newindex = newx*n + newy;
                         if(isvalid(n,newx,newy)){
                             if(grid[newx][newy]==1){
-                                //cout<<dsu.size[newindex]<<dsu.size[index]<<endl;
-                                dsu.add(newindex,index);
-                                //cout<<dsu.size[newindex]<<dsu.size[index]<<endl;
-                            }
+                                                             dsu.add(newindex,index);
+                                 }
                         }
                     }
                 }
@@ -107,14 +105,6 @@ public:
                 }
             }
         }
-        // for(auto i:dsu.size){
-        //     cout<<i<<" ";
-        // }
-        // cout<<endl;
-        // for(auto i:dsu.parent){
-        //     cout<<i<<" ";
-        // }
-        // cout<<endl;
         return ans;
     }
 };
