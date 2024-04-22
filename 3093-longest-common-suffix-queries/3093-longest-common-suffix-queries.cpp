@@ -77,6 +77,7 @@ public:
 // 		return node->ans_ret();
 // 	}
 // };
+    
 const long long prime = 28;
 const long long mod = 1e12+7;
     
